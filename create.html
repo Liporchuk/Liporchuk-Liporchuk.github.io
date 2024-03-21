@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как сделать HTML не в домашник условиях!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="console.css">
+    <link rel="icon" href="icon.png" type="image/icon type">
+</head>
+<body>
+
+    <div style="height: 30px;"></div> 
+    
+    <div class="all_ch">
+        <div class="form-group">
+            <input type="checkbox" name="option1" value="page1" id="page1Checkbox" class="check" checked>
+            <label>1</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" name="option2" value="page2" id="page2Checkbox" class="check">
+            <label>2</label>
+        </div>
+    </div>
+
+    <div class="contents page1">
+        <p class="big_sh">Код сайта</p>
+        <p>
+            Обычный код создания сайта выглядит следующим образом.
+        </p>
+        
+        <div class="all_console">
+            <div class="console">
+                <div class="all_code">
+                    <span class="gray">&lt;!</span><span class="blue">DOCTYPE </span><span class="white_blue">html</span><span class="gray">&gt;</span>
+                    <br><span class="gray">&lt;</span><span class="blue">html </span><span class="white_blue">lang</span><span class="white">=</span><span class="brs">"ru"</span><span class="gray">&gt;</span>
+                    <br><span class="gray">&lt;</span><span class="blue">head</span><span class="gray">&gt;</span>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">&lt;</span><span class="blue">meta </span><span class="white_blue">charset</span><span class="white">=</span><span class="brs">"UTF-8"</span><span class="gray">&gt;</span>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">&lt;</span><span class="blue">meta </span><span class="white_blue">name</span><span class="white">=</span><span class="brs">"viewport" </span><span class="white_blue">content</span><span class="white">=</span><span class="brs">"width=device-width, initial-scale=1.0"</span><span class="gray">&gt;</span>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">&lt;</span><span class="blue">title</span><span class="gray">&gt;</span><span class="white">Название сайта!!!</span><span class="gray">&lt;/</span><span class="blue">title</span><span class="gray">&gt;</span>
+                    <br><span class="gray">&lt;/</span><span class="blue">head</span><span class="gray">&gt;</span>
+                    <br><span class="gray">&lt;</span><span class="blue">body</span><span class="gray">&gt;</span>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="gray">&lt;</span><span class="blue">img </span><span class="white_blue">src</span><span class="white">=</span><span class="brs">"icon.png"</span><span class="white_blue"> width</span><span class="white">=</span><span class="brs">"200px"</span><span class="gray">&gt;</span>
+                    <br><span class="gray">&lt;/</span><span class="blue">body</span><span class="gray">&gt;</span>
+                    <br><span class="gray">&lt;/</span><span class="blue">html</span><span class="gray">&gt;</span>
+
+                </div>
+            </div>
+            <div class="result"><iframe style="width: 100%; height: 250px;border: none;
+                box-shadow: 1px 1px 1px 1px;" src="info.html"></iframe></div>
+        </div>
+        <ul class="spik3" style="text-align: justify;
+        width: 50%;
+        margin: 0 auto;
+        list-style: none;"></ul>
+    </div>
+
+    <div class="contents page2" style="display: none;">
+        <p class="big_sh">Какой редактор лучше?</p>
+        <p>
+            Вот для редактирования сайтов лучше это VS code и Sublime Text. 
+        </p>
+        <p>Но если вы хотите быстрый и хороший редактор то VS Code, а если не занимающий много места то Sublime Text</p>
+    </div>
+
+    <div style="margin: auto; width: 10%; height: 1px; background-color: black;"></div>
+
+<script>
+    var ch1 = document.querySelector('#page1Checkbox');
+    var ch2 = document.querySelector('#page2Checkbox');
+    var ul = document.querySelector('.spik3');
+
+var listItems = [
+    "img - это тег с картинкой",
+    "title - заголовок сайта",
+    "meta - фигня в котором можно установить синтаксис языка, charset и т.д.",
+    "head - это голова сайт можно так считать",
+    "body - это кнч же тело сайта в котором располагаются различные теги",
+];
+
+for (var i = 0; i < listItems.length; i++) {
+    var listItem = document.createElement('li');
+    listItem.textContent = (i + 1) + ". " + listItems[i];
+    ul.appendChild(listItem);
+}
+
+    ch1.checked = true
+    ch2.checked = false
+    
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const contents = document.querySelectorAll('.contents');
+    
+    for (let i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].addEventListener('change', function() {
+            for (let j = 0; j < contents.length; j++) {
+                contents[j].style.display = 'none';
+            }
+            const index = parseInt(this.value.charAt(this.value.length - 1)) - 1;
+            contents[index].style.display = this.checked ? 'block' : 'block';
+            if (this.checked) {
+                for (let k = 0; k < checkboxes.length; k++) {
+                    if (k !== i) {
+                        checkboxes[k].checked = false;
+                    }
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

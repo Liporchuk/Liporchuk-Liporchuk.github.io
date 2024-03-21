@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contents{
+    margin: auto;
+    width:  70%;
+    max-height: 500px;
+    text-align: center;
+    overflow: auto;
+    padding-bottom: 10px;
+    background: white;
+    border-radius: 6px;
+}
+
+body{
+    background-image: url(back.png);
+}
+@font-face {
+    font-family: 'consolas';
+    src: url('consolas.ttf') format('woff');
+}
+.big_sh {
+    font-weight: bold;
+    font-size: 33px;
+  }
+
+.spik{
+    text-align: justify;
+  width: 50%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.spik3{
+    text-align: justify;
+  width: 50%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.spik3 li{
+    font-family: 'Courier New', "consolas", monospace;
+}
+
+.spik li{
+    border-bottom: 1px solid;
+  padding-bottom: 15px;
+  font-family: 'Courier New', "consolas", monospace;
+
+}
+.spik2{
+    text-align: justify;
+  width: 50%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.spik2 li{
+    border-bottom: 1px solid;
+  padding-bottom: 15px;
+  font-family: 'Courier New', "consolas", monospace;
+
+}
+
+
+.form-group input[type=checkbox] {
+    position: relative;
+      border: 2px solid white;
+      border-radius: 2px;
+      background: none;
+      cursor: pointer;
+      line-height: 0;
+      margin: 0 .6em 0 0;
+      outline: 0;
+      padding: 0 !important;
+      vertical-align: text-top;
+      height: 20px;
+      width: 20px;
+      -webkit-appearance: none;
+    opacity: .5;
+  }
+  
+  .form-group input[type=checkbox]:hover {
+    opacity: 1;
+  }
+  
+  .form-group input[type=checkbox]:checked {
+    background-color: white;
+    opacity: 1;
+  }
+  
+  .form-group input[type=checkbox]:before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 4px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    margin: -1px -1px 0 -1px;
+    transform: rotate(45deg) translate(-50%, -50%);
+    z-index: 2;
+  }
+
+.all_ch{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 35%;
+    background-color: black;
+    padding: 11px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.button_delete{
+    position: absolute;
+  top: 13px;
+  right: 17px;
+  background: black;
+  color: white;
+  padding: 4px;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+}

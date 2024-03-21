@@ -1,0 +1,33 @@
+.all_console {
+    width: 68%;
+    text-align: justify;
+    margin: auto;
+}
+
+.all_code{
+    background-color: #1e1e1e;
+}
+
+.blue{
+    color:#2568ca;
+}
+
+.white_blue{
+    color:#68d0fe;
+}
+
+.gray{
+    color:#808080;
+}
+
+.all_code{
+    font-family: 'Courier New', "consolas", monospace;
+}
+
+.brs{
+    color: #ce915b;
+}
+
+.white{
+    color:white;
+}
